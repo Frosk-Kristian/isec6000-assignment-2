@@ -5,6 +5,11 @@ pipeline {
         }
     }
     stages {
+        stage('test') {
+            steps {
+                sh 'node --version'
+            }
+        }
         stage('build') {
             steps {
                 sh 'npm install --save'
